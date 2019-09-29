@@ -1,0 +1,20 @@
+{
+  "name": "wmc-back",
+  "version": "1.0.0",
+  "description": "\"world emissions\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "\"test\": \"echo \\\"Error: no test specified\\\" && exit 1\""
+  },
+  "keywords": [
+    "\"emission\"",
+    "\"population\""
+  ],
+  "author": "Petri Palmu",
+  "license": "MIT",
+  "dependencies": {
+    "fast-csv": "^3.4.0",
+    "highland": "^2.13.5"
+  }
+}
