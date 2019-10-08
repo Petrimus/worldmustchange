@@ -1,4 +1,11 @@
 ﻿10.8.	1	Projektin luonti ja suunnittelua
 11.8.	2	tutustumista ecmascript 6 streameihin ja fs-moduuliin. Ei uutta koodia, mutta testailua tehty.
 12.8. 	1 	Tutustumista Highland pakkaukseen, jota käytetään (ehkä) datan siirrossa World Bankin apista.
+1.9.	2	Luettu ja pohdittu mennäänkö Highlandilla, Node streameillä vai jopa Rxjs: llä.
+3.9.	2	Tehty streamien muokkausta, jotta data saataisiin oikeaan muotoon.
+4.9.	1	Jatkettu taistelua streamien kanssa.
+5.9.	1	Tiedoston luku toimii, mutta http kutsun kanssa ongelmia. En saanut fetchiä taipumaan streameihin, joten käytän request pakettia.
 29.9.	3	Edelleen streamien parissa ahertamista ja kokeiluja. Ensimmäinen siirto onnistui.
+7.10.	1	Opiskeltu javascriptin suoritusjärjestystä, kun ei tunnu menevän niin kuin itse haluaisin.
+8.10.	2	Työskennelty Expressin parissa ja datan hauassa parissa. Nyt datan haku tuntuu toimivan ja backend palauttaa tietoa.
+8.10.	1	Lisäsin expressiin paginoinnin. En tiedä vielä mitä sillä tehdä, mutta on kokeiltu. 	
