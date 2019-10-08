@@ -25,8 +25,7 @@ const download = (url, type, lineCheck) => {
       /* GZIP true for most of the websites now, disable it if you don't need it */
       gzip: true
     })
-      .pipe(zipper.ParseOne(reg)))
-      
+      .pipe(zipper.ParseOne(reg)))      
       .split()
       .compact()
       //.split('\r\n')
