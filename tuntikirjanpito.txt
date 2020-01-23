@@ -1,11 +1,35 @@
-﻿10.8.	1	Projektin luonti ja suunnittelua
-11.8.	2	tutustumista ecmascript 6 streameihin ja fs-moduuliin. Ei uutta koodia, mutta testailua tehty.
-12.8. 	1 	Tutustumista Highland pakkaukseen, jota käytetään (ehkä) datan siirrossa World Bankin apista.
-1.9.	2	Luettu ja pohdittu mennäänkö Highlandilla, Node streameillä vai jopa Rxjs: llä.
-3.9.	2	Tehty streamien muokkausta, jotta data saataisiin oikeaan muotoon.
-4.9.	1	Jatkettu taistelua streamien kanssa.
-5.9.	1	Tiedoston luku toimii, mutta http kutsun kanssa ongelmia. En saanut fetchiä taipumaan streameihin, joten käytän request pakettia.
-29.9.	3	Edelleen streamien parissa ahertamista ja kokeiluja. Ensimmäinen siirto onnistui.
-7.10.	1	Opiskeltu javascriptin suoritusjärjestystä, kun ei tunnu menevän niin kuin itse haluaisin.
-8.10.	2	Työskennelty Expressin parissa ja datan hauassa parissa. Nyt datan haku tuntuu toimivan ja backend palauttaa tietoa.
-8.10.	1	Lisäsin expressiin paginoinnin. En tiedä vielä mitä sillä tehdä, mutta on kokeiltu. 	
+﻿10.8.	  	1	Projektin luonti ja suunnittelua
+11.8.	  	2	tutustumista ecmascript 6 streameihin ja fs-moduuliin. Ei uutta koodia, mutta testailua tehty.
+12.8. 	 	1 Tutustumista Highland pakkaukseen, jota käytetään (ehkä) datan siirrossa World Bankin apista.
+1.9.	  	2	Luettu ja pohdittu mennäänkö Highlandilla, Node streameillä vai jopa Rxjs: llä.
+3.9.	  	2	Tehty streamien muokkausta, jotta data saataisiin oikeaan muotoon.
+4.9.		  1	Jatkettu taistelua streamien kanssa.
+5.9.	  	1	Tiedoston luku toimii, mutta http kutsun kanssa ongelmia. En saanut fetchiä taipumaan streameihin, joten käytän request pakettia.
+29.9.		  3	Edelleen streamien parissa ahertamista ja kokeiluja. Ensimmäinen siirto onnistui.
+7.10.		  1	Opiskeltu javascriptin suoritusjärjestystä, kun ei tunnu menevän niin kuin itse haluaisin.
+8.10.	 	  2	Työskennelty Expressin parissa ja datan hauassa parissa. Nyt datan haku tuntuu toimivan ja backend palauttaa tietoa.
+8.10.	 	  1	Lisäsin expressiin paginoinnin. En tiedä vielä mitä sillä tehdä, mutta on kokeiltu. 	
+9.10.   	1 opiskeltu kuinka frontti ja backki tulisi samaan repoon. Ei vielä toteutettu.
+11.10.  	2 FRONT: Perustettu frontti ja tehty perus layoutti.
+13.10.  	2	Luotu reduxilla store ja testailtu sitä.
+14.10.	  2	Taiteiltu radiobuttonien liikkuvien pallojen kanssa styled components avulla.
+16.10.		2	Taiteiltu radiobuttonien liikkuvien pallojen kanssa styled components avulla.
+18.10.		2	Taiteiltu radiobuttonien liikkuvien pallojen kanssa styled components avulla.
+20.10.		3	Taiteiltu radiobuttonien liikkuvien pallojen kanssa styled components avulla. Vihdoin toimi. Ehkäpä vähän turhan paljon aikaa käytetty tähän, mutta ...
+22.10.    2 Työstetty toista radiobutton kokonaisuutta
+23.10.    3 Tehty reducerit radiobuttoneille
+27.10.    3 Etsitty kaaviomalleja ja valittu recharts ja työstetty tätä.
+28.10.    2 Range slider vaikuttaa käsin tehtäen vaikealta, joten hyödynnetty @Materialui:n apua.
+29.10.    2 Siirretty sliderin ja kaavion hallintaa (tilaa) ylemmäs komponenttihierarkiassa.
+30.10.    2 Äherretty range sliderin ja debounce hookin kanssa.
+31.10.    1 Viimeistelty edellinen ja valmisteltu komponentin uusiokäyttöä.
+4.11.     2 Yritetty järkeistää charttien komponenttihierarkiaa.
+6.11.     2 Samaa kuin yllä
+10.11.    3 Edellinen Viimeistelty
+17.11.    3 Stylejä tulee hirveästi. Syy lopulta, ett styled määritelty komponentin sisällä. Taisi koko ajan luoda uusia komponenttejä.
+
+
+
+
+
+datacollection tarttee rejectin määrittelyn

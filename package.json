@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "watch": "nodemon index.js",
-    "test": "\"test\": \"echo \\\"Error: no test specified\\\" && exit 1\""
+    "test": "jest --verbose",
+    "lint": "eslint ."
   },
   "keywords": [
     "\"emission\"",
@@ -15,14 +16,23 @@
   "author": "Petri Palmu",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "fast-csv": "^3.4.0",
     "highland": "^2.13.5",
+    "morgan": "^1.9.1",
     "request": "^2.88.0",
     "unzipper": "^0.10.5",
     "zlib": "^1.0.5"
   },
   "devDependencies": {
+    "eslint": "^6.5.1",
+    "jest": "^24.9.0",
     "nodemon": "^1.19.3"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }

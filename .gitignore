@@ -1,4 +1,7 @@
 node_modules
 
-# ei csv tiedostoja mukaan
+# exclude csv files
 *.csv
+
+# .env file
+.env

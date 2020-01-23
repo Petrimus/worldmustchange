@@ -6,11 +6,10 @@ const reg = /^(?!Metadata).*$/
 
 const download = (url, type, lineCheck) => {
 
- return new Promise((resolve, reject) => {
-
+  return new Promise((resolve) => {
 
     let countries = []
-    let stream = _(request({
+    _(request({
       /* Here you should specify the exact link to the file you are trying to download */
       uri: url,
       headers: {
@@ -25,7 +24,7 @@ const download = (url, type, lineCheck) => {
       /* GZIP true for most of the websites now, disable it if you don't need it */
       gzip: true
     })
-      .pipe(zipper.ParseOne(reg)))      
+      .pipe(zipper.ParseOne(reg)))
       .split()
       .compact()
       //.split('\r\n')
@@ -64,57 +63,51 @@ const download = (url, type, lineCheck) => {
         // console.log('stream finnished')
         resolve(countries)
       })
-    })
+  })
 }
 
-const parseObjects = (population, singleEmission) => {
+const parseObjects = (population, emissions) => {
   // console.log(typeof population)
   // console.log(typeof emission)
-  
+
   let countries = null
-  
+
   _(population)
-  .map(land => {
-    // console.log(land)    
-    const emis = singleEmission.find(c => c.name === land.name)
-    // console.log(land.name)
-    // console.log(emis.singleEmissions)    
-    
-    land.emissions = emis.singleEmissions
-    // console.log(land)
-    return land
-  })
-  .toArray(result => {
-    // console.log('result', typeof result)
-    // console.log('result66', result)
-    countries = result
-  })
-  /*
-  .collect().toPromise(Promise).then(result => {
-    console.log('result', result[66])
-    
-    countries = result
-})
-  */
- console.log('parseObject', typeof countries)
- 
+    .map(land => {
+      // console.log(land)    
+      const emis = emissions.find(c => c.name === land.name)
+      // console.log(land.name)
+      // console.log(emis.singleEmissions)    
+
+      land.emissions = emis.emissions
+      // console.log(land)
+      return land
+    })
+    .toArray(result => {
+      // console.log('result', typeof result)
+      // console.log('result66', result)
+      countries = result
+    })
+
+  // console.log('parseObject', typeof countries)
+
   return countries
 }
 
 const downloadData = async () => {
-  const urlPopulation = 'http://api.worldbank.org/v2/en/indicator/SP.POP.TOTL?downloadformat=csv'
-  const urlEmissions = 'http://api.worldbank.org/v2/en/indicator/EN.ATM.CO2E.KT?downloadformat=csv'
+  const POPULATION_URI = 'http://api.worldbank.org/v2/en/indicator/SP.POP.TOTL?downloadformat=csv'
+  const EMISSION_URI = 'http://api.worldbank.org/v2/en/indicator/EN.ATM.CO2E.KT?downloadformat=csv'
 
-  const population = await download(urlPopulation, 'population', 5)
-  const emission = await download(urlEmissions, 'singleEmissions', 4)
+  const population = await download(POPULATION_URI, 'population', 5)
+  const emission = await download(EMISSION_URI, 'emissions', 4)
   const finishedData = await parseObjects(population, emission)
 
   console.log('Data collection completeted')
   // console.log('finished data', finishedData[66]) 
   // console.log('type of finished data', typeof finishedData)
   // console.log('is array', finishedData instanceof Array)
-  
+
   return finishedData
 }
 
-module.exports =  { downloadData }
+module.exports = { downloadData }
