@@ -27,9 +27,13 @@
 6.11.     2 Samaa kuin yllä
 10.11.    3 Edellinen Viimeistelty
 17.11.    3 Stylejä tulee hirveästi. Syy lopulta, ett styled määritelty komponentin sisällä. Taisi koko ajan luoda uusia komponenttejä.
-
-
-
+22.1.     1 Muistelin missä menin ja pieniä stailauksia.
+23.1.     2 Lisää stailauksia ja top listojen valmistelua.
+24.1.     2 Tehty top listoja
+28.1.     2 Liitetty lodash ja debounce sliderin callback funktioon. Vuosi reduceri tehty.
+3.2.      2 Työstetty country listiä.
+5.2.      1 Edelleen country list.
+7.2.      2 Päätinkin antaa bäckin hoitaa maiden järjestämisen listaa varten.
 
 
 datacollection tarttee rejectin määrittelyn

@@ -17,14 +17,16 @@ countryRouter.get('/info', (req, res) => {
 })
 
 countryRouter.get('/', (req, res) => {
-  if (req.query.p) {
+  console.log('req query ', req.query)
+  if (req.query.page) {    
+    
     const countryCount = countryData.length
     // console.log('countrycount', countryCount)
 
     const perPage = 10
     const pageCount = Math.ceil(countryCount / perPage)
 
-    let page = parseInt(req.query.p)
+    let page = parseInt(req.query.page)
     if (page < 1) page = 1
     if (page > pageCount) page = pageCount
 
@@ -34,7 +36,7 @@ countryRouter.get('/', (req, res) => {
     if (from < 0) from = 0
 
     res.json({
-      countries: countryData.slice(from, to) /*.map(c => c.name)*/,
+      countries: countryData.slice(from, to).map(c => c.name),
       page,
       pageCount
     })
