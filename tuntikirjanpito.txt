@@ -34,6 +34,13 @@
 3.2.      2 Työstetty country listiä.
 5.2.      1 Edelleen country list.
 7.2.      2 Päätinkin antaa bäckin hoitaa maiden järjestämisen listaa varten.
+8.2.      6 Ei sorttia sittenkään bäckiin. Lista toimii, mutta toiminnallisuus tarttee hieromista.
+10.2.     2 Valmisteltu testejä
+13.2.     2 Puuhattu lisää ulkoasun kanssa
+14.2.     2 yritetty saada listojen paginaatiota toimimaan
+15.2.     3 Tehty testejä bäkkäriin.
+17.2.     3 Yritetty saada bakki lataamaan tietoa ennen serverin käynnistymistä.
+21.2.     3 Edelliset valmiina ja toimivat.
 
 
 datacollection tarttee rejectin määrittelyn

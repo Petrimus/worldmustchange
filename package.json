@@ -4,9 +4,9 @@
   "description": "\"world emissions\"",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "watch": "nodemon index.js",
-    "test": "jest --verbose",
+    "start": "NODE_ENV=production node index.js",
+    "watch": "NODE_ENV=development nodemon index.js",
+    "test": "NODE_ENV=test jest --verbose",
     "lint": "eslint ."
   },
   "keywords": [
@@ -30,7 +30,8 @@
   "devDependencies": {
     "eslint": "^6.5.1",
     "jest": "^24.9.0",
-    "nodemon": "^1.19.3"
+    "nodemon": "^1.19.3",
+    "supertest": "^4.0.2"
   },
   "jest": {
     "testEnvironment": "node"

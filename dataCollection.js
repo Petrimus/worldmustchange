@@ -94,20 +94,25 @@ const parseObjects = (population, emissions) => {
   return countries
 }
 
+let countrydata = null
+
 const downloadData = async () => {
+  // console.log('country data in data collection type', countrydata)
+  if (!countrydata) {
   const POPULATION_URI = 'http://api.worldbank.org/v2/en/indicator/SP.POP.TOTL?downloadformat=csv'
   const EMISSION_URI = 'http://api.worldbank.org/v2/en/indicator/EN.ATM.CO2E.KT?downloadformat=csv'
 
   const population = await download(POPULATION_URI, 'population', 5)
   const emission = await download(EMISSION_URI, 'emissions', 4)
   const finishedData = await parseObjects(population, emission)
-
+  countrydata = finishedData
+  
   console.log('Data collection completeted')
-  // console.log('finished data', finishedData[66]) 
-  // console.log('type of finished data', typeof finishedData)
-  // console.log('is array', finishedData instanceof Array)
-
-  return finishedData
+  
+  // console.log('data', finishedData)
+} 
+ 
+  return countrydata
 }
 
 module.exports = { downloadData }
