@@ -1,4 +1,4 @@
-﻿10.8.	  	1	Projektin luonti ja suunnittelua
+﻿10.8.	  	2	Projektin luonti ja suunnittelua
 11.8.	  	2	tutustumista ecmascript 6 streameihin ja fs-moduuliin. Ei uutta koodia, mutta testailua tehty.
 12.8. 	 	1 Tutustumista Highland pakkaukseen, jota käytetään (ehkä) datan siirrossa World Bankin apista.
 1.9.	  	2	Luettu ja pohdittu mennäänkö Highlandilla, Node streameillä vai jopa Rxjs: llä.
@@ -25,6 +25,7 @@
 31.10.    1 Viimeistelty edellinen ja valmisteltu komponentin uusiokäyttöä.
 4.11.     2 Yritetty järkeistää charttien komponenttihierarkiaa.
 6.11.     2 Samaa kuin yllä
+          51
 10.11.    3 Edellinen Viimeistelty
 17.11.    3 Stylejä tulee hirveästi. Syy lopulta, ett styled määritelty komponentin sisällä. Taisi koko ajan luoda uusia komponenttejä.
 22.1.     1 Muistelin missä menin ja pieniä stailauksia.
@@ -41,6 +42,18 @@
 15.2.     3 Tehty testejä bäkkäriin.
 17.2.     3 Yritetty saada bakki lataamaan tietoa ennen serverin käynnistymistä.
 21.2.     3 Edelliset valmiina ja toimivat.
-
-
+22.2.     3 Lisää api testejä. Testattu mongoosemockia.
+24.2.     2 Luovuttu mongoosemockista, koska se on vanhentumass.
+25.2.     2 Vaihdettu testaaminen mongodb-in-memory-serveriin, joka pitäisi olla uutta uutta.
+27.2.     3 Backend testit toimii. Tehty oma regex validaattori salasanalle.
+          100
+28.2.     2 Työskennelty kirjautumisen kanssa.
+29.2.     6 Siirretty kirjautuminen reduxiin ja taiteiltu routerin kanssa.
+1.3.      5 Kirjautumista, reduxia ja routeria.
+3.3.      1 Käynnistetty sovellus ja korjattu edellisiä. Ei toimi.
+4.3.      2 Korjattu vikoja reitytyksessä.
+5.3.      3 Tehty custom router history, jotta sitä voi muuttaa reducerissa.
+          120
+7.3.      5 Routeria ja login työstetty
+8.3.      6 Sovellus taas toimii. Login toimii ja signup toimii.
 datacollection tarttee rejectin määrittelyn

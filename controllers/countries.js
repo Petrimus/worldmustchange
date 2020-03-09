@@ -5,7 +5,7 @@ countryRouter.get('/info', (req, res) => {
   res.send('<h1>Wolrd must change!</h1>')
 })
 
-countryRouter.get('/', async (req, res, next) => {
+countryRouter.get('/', async (req, res) => {
   // console.log('req query ', req.query)
   // console.log('country data length', countryData.length)
   const data = await downloadData()
@@ -50,8 +50,9 @@ countryRouter.get('/', async (req, res, next) => {
   }
 })
 
-countryRouter.get('/all', (req, res) => {
-  res.json(countryData)
+countryRouter.get('/all', async (req, res) => {
+  const data = await downloadData()
+  res.json(data)
 })
 
 module.exports = countryRouter

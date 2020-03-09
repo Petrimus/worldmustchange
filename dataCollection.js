@@ -94,25 +94,25 @@ const parseObjects = (population, emissions) => {
   return countries
 }
 
-let countrydata = null
 
-const downloadData = async () => {
-  // console.log('country data in data collection type', countrydata)
-  if (!countrydata) {
-  const POPULATION_URI = 'http://api.worldbank.org/v2/en/indicator/SP.POP.TOTL?downloadformat=csv'
-  const EMISSION_URI = 'http://api.worldbank.org/v2/en/indicator/EN.ATM.CO2E.KT?downloadformat=csv'
+// console.log('caountry data', countrydata)
+let countryData = null
 
-  const population = await download(POPULATION_URI, 'population', 5)
-  const emission = await download(EMISSION_URI, 'emissions', 4)
-  const finishedData = await parseObjects(population, emission)
-  countrydata = finishedData
-  
-  console.log('Data collection completeted')
-  
-  // console.log('data', finishedData)
-} 
- 
-  return countrydata
+const downloadData = async () => {  
+  // console.log('country data', countryData)
+  if (!countryData) {
+    const POPULATION_URI = 'http://api.worldbank.org/v2/en/indicator/SP.POP.TOTL?downloadformat=csv'
+    const EMISSION_URI = 'http://api.worldbank.org/v2/en/indicator/EN.ATM.CO2E.KT?downloadformat=csv'
+
+    const population = await download(POPULATION_URI, 'population', 5)
+    const emission = await download(EMISSION_URI, 'emissions', 4)
+    const finishedData = parseObjects(population, emission)
+    // eslint-disable-next-line require-atomic-updates
+    countryData = finishedData
+    
+  }
+
+  return countryData
 }
 
 module.exports = { downloadData }
