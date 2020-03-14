@@ -22,18 +22,17 @@
 28.10.    2 Range slider vaikuttaa käsin tehtäen vaikealta, joten hyödynnetty @Materialui:n apua.
 29.10.    2 Siirretty sliderin ja kaavion hallintaa (tilaa) ylemmäs komponenttihierarkiassa.
 30.10.    2 Äherretty range sliderin ja debounce hookin kanssa.
-31.10.    1 Viimeistelty edellinen ja valmisteltu komponentin uusiokäyttöä.
+31.10.    2 Viimeistelty edellinen ja valmisteltu komponentin uusiokäyttöä.
 4.11.     2 Yritetty järkeistää charttien komponenttihierarkiaa.
 6.11.     2 Samaa kuin yllä
-          51
 10.11.    3 Edellinen Viimeistelty
 17.11.    3 Stylejä tulee hirveästi. Syy lopulta, ett styled määritelty komponentin sisällä. Taisi koko ajan luoda uusia komponenttejä.
-22.1.     1 Muistelin missä menin ja pieniä stailauksia.
+22.1.     2 Muistelin missä menin ja pieniä stailauksia.
 23.1.     2 Lisää stailauksia ja top listojen valmistelua.
 24.1.     2 Tehty top listoja
 28.1.     2 Liitetty lodash ja debounce sliderin callback funktioon. Vuosi reduceri tehty.
 3.2.      2 Työstetty country listiä.
-5.2.      1 Edelleen country list.
+5.2.      2 Edelleen country list.
 7.2.      2 Päätinkin antaa bäckin hoitaa maiden järjestämisen listaa varten.
 8.2.      6 Ei sorttia sittenkään bäckiin. Lista toimii, mutta toiminnallisuus tarttee hieromista.
 10.2.     2 Valmisteltu testejä
@@ -46,14 +45,19 @@
 24.2.     2 Luovuttu mongoosemockista, koska se on vanhentumass.
 25.2.     2 Vaihdettu testaaminen mongodb-in-memory-serveriin, joka pitäisi olla uutta uutta.
 27.2.     3 Backend testit toimii. Tehty oma regex validaattori salasanalle.
-          100
 28.2.     2 Työskennelty kirjautumisen kanssa.
 29.2.     6 Siirretty kirjautuminen reduxiin ja taiteiltu routerin kanssa.
 1.3.      5 Kirjautumista, reduxia ja routeria.
 3.3.      1 Käynnistetty sovellus ja korjattu edellisiä. Ei toimi.
 4.3.      2 Korjattu vikoja reitytyksessä.
 5.3.      3 Tehty custom router history, jotta sitä voi muuttaa reducerissa.
-          120
 7.3.      5 Routeria ja login työstetty
 8.3.      6 Sovellus taas toimii. Login toimii ja signup toimii.
+9.3.      4 Tehty testejä.
+10.3.     5 Lisää testejä. Ongelmia reduxin ja routerin kanssa testaamisessa.
+11.3.     5 Korjailtu virheitä, joita testeissä tullut esiin.
+12.3.     5 Otettu cypress uudesta materiaalista.
+13.3.     5 Lisää Cypressiä ja aloitettu siirto Herokuun.
+14.3.     12 Ikävä kyllä kiireeksi meni. Tehty Herokua, Cypressiä, korjauksia ja kaikkea muuta.
+
 datacollection tarttee rejectin määrittelyn

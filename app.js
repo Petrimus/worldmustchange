@@ -57,6 +57,7 @@ if (process.env.NODE_ENV !== 'test') {
 
 app.use(bodyParser.json())
 app.use(cors())
+app.use(express.static('build'))
 app.use(middleware.requestLogger)
 app.use('/api/countries', countryRouter)
 app.use('/api/users', userRouter)

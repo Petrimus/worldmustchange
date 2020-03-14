@@ -38,7 +38,7 @@ countryRouter.get('/', async (req, res) => {
     const nameCapitalized = country.charAt(0).toUpperCase() + country.slice(1)    
     const resCountry = data.find((c) => c.name === nameCapitalized)
     
-    if (resCountry) {
+    if (resCountry !== undefined) {
       res.json(resCountry)
     } else {
       res.status(404).end()
