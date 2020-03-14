@@ -9,7 +9,7 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const logger = require('./utils/logger')
-const { MongoMemoryServer } = require('mongodb-memory-server')
+
 
 if (process.env.NODE_ENV !== 'test') {
   logger.info('connecting to MongoDB')
@@ -26,6 +26,8 @@ if (process.env.NODE_ENV !== 'test') {
       logger.error('error connection to MongoDB:', error.message)
     })
 } else if (process.env.NODE_ENV === 'test') {
+  const { MongoMemoryServer } = require('mongodb-memory-server')
+  
   logger.info('connecting to test MongoDB')
   const mongoServer = new MongoMemoryServer()
   
