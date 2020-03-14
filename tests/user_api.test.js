@@ -7,7 +7,7 @@ const helper = require('./test_helper')
 const UserModel = require('../models/users')
 
 describe('Test User api, when inially 2 users at db', () => {
-  beforeAll(async () => await dbHandler.connect())
+  // beforeAll(async () => await dbHandler.connect())
   beforeEach(async () => {
     await dbHandler.clearDatabase()
     let userObject = new UserModel(helper.initialUsers[0])
@@ -91,7 +91,7 @@ describe('Test User api, when inially 2 users at db', () => {
       .expect('Content-Type', /application\/json/)
       // console.log('error', response.body.error)      
 
-    expect(response.body.error).toContain('password length must be atleast 6 digits long')
+    expect(response.body.error).toContain('password length must be at least 6 digits long')
 
     const usersAtEnd = await helper.usersInDb()
     expect(usersAtEnd.length).toBe(userAtStart.length)
@@ -136,7 +136,7 @@ describe('Test User api, when inially 2 users at db', () => {
       .expect(400)
       .expect('Content-Type', /application\/json/)
 
-    expect(result.body.error).toContain('password has to have atleast one number')
+    expect(result.body.error).toContain('password has to have at least one number')
     const usersAtEnd = await helper.usersInDb()
     expect(usersAtEnd.length).toBe(userAtStart.length)
 

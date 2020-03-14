@@ -1,9 +1,13 @@
 const mongoose = require('mongoose')
 const { MongoMemoryServer } = require('mongodb-memory-server')
+// const UserModel = require('../models/users')
+const logger = require('../utils/logger')
 
 const mongod = new MongoMemoryServer()
 
 module.exports.connect = async () => {
+  console.log('db-handler')
+  
   const uri = await mongod.getConnectionString()
 
   const mongooseOpts = {
@@ -11,8 +15,11 @@ module.exports.connect = async () => {
     useUnifiedTopology: true,
     useCreateIndex: true
   }
-
+  logger.info('connecting to test MongoDB')
   await mongoose.connect(uri, mongooseOpts)
+    .then(() => {
+      logger.info('connected to test MongoDB')
+    })
 }
 
 module.exports.closeDatabase = async () => {
@@ -29,3 +36,4 @@ module.exports.clearDatabase = async () => {
     await collection.deleteMany()
   }
 }
+

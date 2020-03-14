@@ -38,7 +38,10 @@ const download = (url, type, lineCheck) => {
             if (Number(value) === 0) {
               values.push(null)
             } else {
+              /*
               values.push(Number(value))
+              */
+              values.push(Math.round(Number(value) * 10) / 10)
             }
           }
           return values
@@ -98,7 +101,7 @@ const parseObjects = (population, emissions) => {
 // console.log('caountry data', countrydata)
 let countryData = null
 
-const downloadData = async () => {  
+const downloadData = async () => {
   // console.log('country data', countryData)
   if (!countryData) {
     const POPULATION_URI = 'http://api.worldbank.org/v2/en/indicator/SP.POP.TOTL?downloadformat=csv'
@@ -109,7 +112,7 @@ const downloadData = async () => {
     const finishedData = parseObjects(population, emission)
     // eslint-disable-next-line require-atomic-updates
     countryData = finishedData
-    
+
   }
 
   return countryData
