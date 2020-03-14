@@ -64,6 +64,9 @@ userRouter.post('/', async (request, response, next) => {
 
 userRouter.put('/favorites/', async (request, response, next) => {
   const body = request.body
+  console.log('body', body)
+  // console.log('request', request)
+    
   const authorization = request.get('authorization')
   console.log('authorization ', authorization)
   
