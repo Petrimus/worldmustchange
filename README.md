@@ -3,7 +3,7 @@
 Application: https://fast-bayou-83193.herokuapp.com/
 Authentication: username: tester, password: tester10.
 
-Timetable and instructions: https://petrimus.github.io/time-table-fullstack/
+Timetable and instructions: https://petrimus.github.io/timetable/
 
 github repo back end: https://github.com/Petrimus/worldmustchange
 github repo front end: https://github.com/Petrimus/worldmustchange-front
